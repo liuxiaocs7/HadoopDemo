@@ -24,7 +24,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
      * LongWritable key, Text value表示输入数据中的类型
      */
     @Override
-    protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, IntWritable>.Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
         // 1.获取1行
         // liuxiaocs liuxiaocs
@@ -36,6 +36,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         // liuxiaocs
         String[] words = line.split(" ");
 
+        // 3.循环写出
         for (String word : words) {
             // 封装outK
             outK.set(word);

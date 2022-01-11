@@ -17,7 +17,7 @@ public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritab
     private static IntWritable outV = new IntWritable();
 
     @Override
-    protected void reduce(Text key, Iterable<IntWritable> values, Reducer<Text, IntWritable, Text, IntWritable>.Context context) throws IOException, InterruptedException {
+    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
         int sum = 0;
         // liuxiaocs (1, 1)
         // 累加

@@ -28,12 +28,12 @@ public class WordCountDriver {
         job.setMapOutputValueClass(IntWritable.class);
 
         // 5.设置最终输出的kv类型
-        job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(IntWritable.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
 
         // 6.设置输入路径和输出路径
         FileInputFormat.setInputPaths(job, new Path("D:\\Development\\Code\\IdeaProjects\\HadoopDemo\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\Development\\Code\\IdeaProjects\\HadoopDemo\\output\\output2"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\Development\\Code\\IdeaProjects\\HadoopDemo\\output\\output22222"));
 
         // 7.提交job
         boolean result = job.waitForCompletion(true);

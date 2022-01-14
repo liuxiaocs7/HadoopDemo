@@ -1,6 +1,5 @@
 package com.liuxiaocs.mapreduce.mapjoin;
 
-import com.ctc.wstx.util.StringUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FileSystem;
